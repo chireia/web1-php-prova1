@@ -1,0 +1,498 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+::placeholder {
+    color: #004824;
+}
+
+::selection {
+    background-color: #098147;
+    color: white;
+}
+
+h2 {
+    line-height: 40px;
+	width: 100%;
+    text-align: center;
+
+    color: white;
+    background-color: #098147;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.4);
+}
+
+h3 {
+    margin: 0px 0px 10px 0px;
+    line-height: 30px;
+	width: 100%;
+    text-align: center;
+
+    color: white;
+    background-color: #098147;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.4);
+}
+
+h4 {
+    margin: 5px;
+    color: white;
+}
+
+.material-icons.green {
+    color: #098147;
+}
+
+.material-icons.white {
+    color: #ffffff;
+}
+
+body {
+    background-image: url("../img/back.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+        'menu header'
+        'login login'
+        'avisos avisos'
+        'mural mural'
+        'footer footer';
+    
+    
+}
+
+header {
+    grid-area: header;
+
+    background-color: #004824;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header > header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header > #title {
+    margin: 10px 30px;
+
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold; 
+    text-shadow: 4px 4px 5px #000;
+}
+
+header > #fotos {
+    width: auto;
+
+    display: none;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header > #fotos > .foto{
+    height: auto;
+}
+
+header > #fotos >.foto > img{
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    
+    border: #098147 solid 2px;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.452);
+
+    animation-name: cor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+header > #fotos > .nome {
+    margin: 10px;
+
+    text-shadow: 4px 4px 5px #000;
+    font-weight: bold;
+    color: white;
+}
+
+nav {
+    grid-area: menu;
+
+    background-color: #098147;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+
+    min-height: 40px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > .burger > div > img {
+    height: 20px;
+    filter: invert(100%);
+}
+
+nav > .burger >.burger-itens {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+nav > .burger > .burger-itens > a {
+    display: block;
+    padding: 15px 30px;
+
+    background-color: #004824;
+    color: white;
+    text-decoration: none;
+}
+
+nav > .burger > .burger-itens > a:hover {
+    background-color: #098147;
+}
+
+.burger:hover .burger-itens {
+    display: block;
+}
+
+nav > #menu {
+    display: none;
+    width: 100%;
+    max-width: 820px;
+    height: 100%;
+
+    
+	flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav > #menu > a {
+    width: 100px;
+    padding: 10px 16px;
+
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+nav > #menu > a:hover {
+    transition: 0.5s;
+    background-color: #004824
+}
+
+#aut{
+    grid-area: login;
+    
+    margin: 10px;
+    transition: 0.6s;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#aut > form {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    height: 350px;
+    width: calc(250px + 5vw);
+    margin: 20px auto;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#aut > form > #top {
+    width: 100%;
+    height: 25%;
+    background-color: #098147;
+    border-radius: 10px 10px 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aut > form > #top > img {
+    height: 80%;
+    filter: invert(100%);
+}
+
+#aut > form > #bot {
+    margin: 10px 0px;
+    width: 100%;
+    height: calc(75% - 20px);
+    
+    color: #004824;
+    font-weight: bold;
+    text-align: center;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#aut > form > #bot > label > input {
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+
+    text-align: center;
+    color: #004824;
+
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.8s;
+    border: #00e27100 solid 2px;
+    outline: none;
+}
+
+#aut > form > #bot > label > input:focus {
+    border: #098147 solid 2px;     
+}
+
+#aut > form > #bot > input[type=button] {
+    width: 50%;
+    height: 35px;
+    background-color: #098147;
+    font-weight: bold;
+    
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    
+    color: white;
+}
+
+#aut > form > #bot > input[type=button]:hover {
+    background-color: #004824;
+}
+
+#avisos {
+    grid-area: avisos;
+	
+    margin: 10px;
+	
+	display: flex;
+	flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+	
+}
+
+#avisos > article {
+    background-color: white;
+	margin: 10px;
+	width: 230px;
+}
+
+#avisos > .card {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#avisos > .card > img {
+    width: 100%;
+}
+
+#avisos > .card > div > button {
+    width: 100px;
+    height: 35px;
+    background-color: #098147;
+    font-weight: bold;
+    
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    
+    color: white;
+}
+
+#avisos > .card > #group {
+    width: 150px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#avisos > .card > div > button:hover {
+    background-color: #004824;
+}
+
+#mural {
+    grid-area: mural;
+
+    margin: 10px;
+	
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+#mural > h2 {
+	width: 100%;
+	text-align: center;
+}
+
+#mural > article {
+	margin: 15px;
+    width: 260px;
+    min-height: 150px;
+    font-size: .8em;
+
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background-color: white;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#mural > article > .card2img {
+    width: 60%;
+}
+
+#mural > article > .card2img > img {
+    width: 110%;
+
+    border: #098147 solid 2px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+
+    position: relative;
+    left: -20px;
+}
+
+#mural > .card2 > .card2text{
+    padding: 10px;
+    width: 40%;
+
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+
+    height: 56px;
+    text-align: center;
+
+    background-image: url(../img/ic.png), linear-gradient(#098147, #004824);
+    background-size: 46px;
+    background-repeat: no-repeat, repeat;
+    background-position: right center;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > h3 {
+    display: none;
+    margin: 0 10px;
+    font-size: 1em;
+    width: 300px;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        grid-template-columns: 1fr 5fr 5fr 1fr;
+        grid-template-areas: 
+        'header header header header'
+        'menu menu menu menu'
+        'sideL avisos avisos login'
+        'sideL avisos avisos sideR'
+        'mural mural mural mural'
+        'footer footer footer footer';
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    header > #fotos {
+        display: flex;
+    }
+
+    nav {
+        top: 74px;
+        background-color: #098147
+    }
+
+    nav > .burger {
+        display: none;
+    }
+
+    nav > #menu {
+        display: flex;
+    }
+
+    #aut {
+        opacity: 0.2;
+    }
+
+    #aut:hover{
+        opacity: 1;
+    }
+
+    footer > h3 {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        grid-template-columns: 1fr 3fr 3fr 1fr;
+        grid-template-areas: 
+        'header header header header'
+        'menu menu menu menu'
+        'sideL avisos avisos login'
+        'sideL avisos avisos sideR'
+        'sideL mural mural sideR'
+        'footer footer footer footer';
+    }
+}
+
+@keyframes cor {
+    0% {transform: rotate(10deg);}
+    50% {transform: rotate(-10deg);}
+    100% {transform: rotate(10deg);}
+}
