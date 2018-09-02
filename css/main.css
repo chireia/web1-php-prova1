@@ -12,11 +12,16 @@
     color: white;
 }
 
+h1 {
+    cursor: pointer;
+}
+
 h2 {
     line-height: 40px;
 	width: 100%;
     text-align: center;
 
+    cursor: pointer;
     color: white;
     background-color: #098147;
     border-radius: 5px;
@@ -29,6 +34,7 @@ h3 {
 	width: 100%;
     text-align: center;
 
+    cursor: pointer;
     color: white;
     background-color: #098147;
     border-radius: 5px;
@@ -38,6 +44,7 @@ h3 {
 h4 {
     margin: 5px;
     color: white;
+    cursor: pointer;
 }
 
 .material-icons.green {
@@ -262,6 +269,11 @@ nav > #menu > a:hover {
     align-items: center;
 }
 
+#aut > form > #bot > #titulo {
+    padding: 0 10px;
+    width: 100%;
+}
+
 #aut > form > #bot > label > input {
     height: 30px;
     border: none;
@@ -283,14 +295,15 @@ nav > #menu > a:hover {
 #aut > form > #bot > input[type=button] {
     width: 50%;
     height: 35px;
-    background-color: #098147;
-    font-weight: bold;
-    
     border: none;
     outline: none;
-    transition: 0.4s;
     
+    
+    transition: 0.4s;
+    background-color: #098147;
+    font-weight: bold;
     color: white;
+    cursor: pointer;
 }
 
 #aut > form > #bot > input[type=button]:hover {
@@ -333,23 +346,28 @@ nav > #menu > a:hover {
 #avisos > .card > div > button {
     width: 100px;
     height: 35px;
+    border: none;
+    
+    transition: 0.4s;
     background-color: #098147;
     font-weight: bold;
-    
-    border: none;
     outline: none;
-    transition: 0.4s;
+    cursor: pointer;
     
     color: white;
 }
 
-#avisos > .card > #group {
+#avisos > .card > .group {
     width: 150px;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
+}
+
+#avisos > .card > .group > i {
+    cursor: help;
 }
 
 #avisos > .card > div > button:hover {
