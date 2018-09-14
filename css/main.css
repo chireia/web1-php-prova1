@@ -119,7 +119,7 @@ header > #fotos > .foto{
     height: auto;
 }
 
-header > #fotos >.foto > img{
+header > #fotos >.foto > a >  img{
     margin: 10px;
     height: 50px;
     width: 50px;
